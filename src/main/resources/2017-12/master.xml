@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<include file="deltas/2017_11_21_ENABLING_SERVICES_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_11_27_ORGANIZATION_INDEX.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_11_29_CONNECTSUPPORT_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_11_30_MMS_ALEKS_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_12_11_CONNECTED_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_12_15_ESSUPPORT_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_12_15_REDBIRD_CLIENT_ID.sql" relativeToChangelogFile="true" />
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <include file="deltas/2017_07_17_OAUTH_DDL.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_07_17_OAUTH_DML.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_07_17_APP_DDL.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_07_17_APP_DML.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_07_24_LOGIN_LOG.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_08_03_CLIENTS_INDEX.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_07_28_SIMPLIFIED_PASS.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_08_09_PHONE_INDEX.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_08_11_ALTER_ROLE.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_09_08_EVENT_PUBLISHING_DDL.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2017_09_21_USER_WITH_ACTUATOR_ROLE.sql" relativeToChangelogFile="true" />
+</databaseChangeLog>

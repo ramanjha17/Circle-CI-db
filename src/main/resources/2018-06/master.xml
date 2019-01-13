@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<include file="deltas/2018_04_23_ROLE_PRIORITY.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_04_30_AFFILIATION_PERSON_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_02_ENTERPRISE_PRODUCT_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_02_LARS_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_02_OLLNR_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_02_TEMPORARY_PASSWORD.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_08_REDSHELF_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_05_21_RUBRIC_XID_FIX.sql" relativeToChangelogFile="true" />
+</databaseChangeLog>

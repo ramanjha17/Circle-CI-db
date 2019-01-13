@@ -1,0 +1,160 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	<groupId>com.mhe</groupId>
+	<artifactId>enterpise-identity-db</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Enterprise entity DB</name>
+	<description>Spring boot project for entity db</description>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+  <properties>
+		<currentRelease>2018-06</currentRelease>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>3.4.1</version>
+				<configuration>
+					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+					<changeLogFile>${masterScript}</changeLogFile>
+					<username>${dbUsername}</username>
+					<password>${dbPassword}</password>
+					<driver>${db.driver}</driver>
+					<url>${db.url}</url>
+					<verbose>true</verbose>
+					<dropFirst>false</dropFirst>
+					<contexts>${env.contexts}</contexts>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<env>local</env>
+				<env.contexts>local</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://127.0.0.1:3306/jidm</db.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<env>dev</env>
+				<env.contexts>dev</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://idm-dev-aurora.cga3dpgjvy5l.us-east-1.rds.amazonaws.com:3306/jidm</db.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>qastg</id>
+			<properties>
+				<env>qastg</env>
+				<env.contexts>qastg</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://idm-qastg-aurora.cga3dpgjvy5l.us-east-1.rds.amazonaws.com:3306/jidm</db.url>
+				
+			</properties>
+		</profile>
+		<profile>
+			<id>qalv</id>
+			<properties>
+				<env>qalv</env>
+				<env.contexts>qalv</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://idm-qalv-aurora.cga3dpgjvy5l.us-east-1.rds.amazonaws.com:3306/jidm</db.url>
+			</properties>
+		</profile>
+		<profile>
+			<id>pqa</id>
+			<properties>
+				<env>pqa</env>
+				<env.contexts>pqa</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+			</properties>
+		</profile>
+		<profile>
+			<id>demo</id>
+			<properties>
+				<env>demo</env>
+				<env.contexts>demo</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<env>prod</env>
+				<env.contexts>prod</env.contexts>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+			</properties>
+		</profile>
+		<profile>
+			<id>pre-release</id>
+			<properties>
+				<masterScript>${currentRelease}/master.xml</masterScript>
+			</properties>
+		</profile>
+	</profiles>
+
+	<repositories>
+		<repository>
+			<id>jenkins-artifactory</id>
+			<url>http://awsci.mheducation.com/artifactory/repo</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jenkins-artifactory</id>
+			<url>http://awsci.mheducation.com/artifactory/repo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<url>not used</url>
+		</repository>
+		<snapshotRepository>
+			<id>artifactory</id>
+			<url>not used</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+</project>

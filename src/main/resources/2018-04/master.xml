@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<include file="deltas/2018_03_08_GRADE_SOURCE.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_03_08_MIRATED_USERS.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_03_09_CED_MIGRATE_USERS.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_03_16_ROLES.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_03_18_CLEAN_EMAILS.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_03_24_UNIQUE_EMAILS.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_04_02_AANDR_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_04_02_COURSE_DELIVERY_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_04_02_COURSEASSEMBLY_CLIENT_ID.sql" relativeToChangelogFile="true" />
+	<include file="deltas/2018_04_02_STANDARDS_CLIENT_ID.sql" relativeToChangelogFile="true" />
+    <include file="deltas/2018_04_05_RESET_DATE_FIELDS_TIMESTAMP.sql" relativeToChangelogFile="true" />
+    <include file="deltas/2018_04_06_CLIENT_XID.sql" relativeToChangelogFile="true" />
+    <include file="deltas/2018_04_13_EVENT_MESSAGE_MESSAGE.sql" relativeToChangelogFile="true" />
+    <include file="deltas/2018_04_20_USER_NAME_DDL.sql" relativeToChangelogFile="true" />
+</databaseChangeLog>
